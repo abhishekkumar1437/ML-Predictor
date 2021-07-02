@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-)q!%c*)!mtism&myf6x48&gwytz6hy48xcg5f=5ur-e2zpr3u0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','mlpredictor.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1','mlpredictor.herokuapp.com']
 
 
 # Application definition
