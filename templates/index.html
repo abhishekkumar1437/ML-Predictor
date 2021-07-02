@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{% block title %}{% endblock title %}  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  
+ 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  {% comment %}------------------------------------ start of about us -----------------------{% endcomment %}
+  <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+  {% comment %}------------------------------------ start of about us -----------------------{% endcomment %}
+
+
+
+
+
+  <style>
+{% comment %}------------------ start of about us ---------{% endcomment %}
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+
+.header {
+  background-color: #9933cc;
+  color: #ffffff;
+  padding: 15px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+.aside {
+  background-color: #33b5e5;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+
+{% comment %}-------------------- start of about us -------------{% endcomment %}
+
+
+{% comment %}---------- start of home page ------------{% endcomment %}
+  .pad{
+    padding-top:15px;
+  }
+  
+ .marg{
+   padding-left:20px;
+ }
+{% comment %}---------- end  of home page ------------{% endcomment %}
+
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md  navbar-expand-sm navbar-expand-lg bg-dark navbar-dark ">
+  <a class="navbar-brand" href="/">ABHISHEK</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link soc marg" href="/">Home</a>
+      </li>
+      <li class="nav-item soc marg">
+        <a class="nav-link" href="weathers">Weather</a>
+      </li>
+      <li class="nav-item soc  marg" >
+        <a class="nav-link" href="calculator/calculators">calculator</a>
+      </li>
+           {% if user.is_authenticated %}
+              <li class="nav-item marg">
+           <a style="color:yellow;" class="nav-link soc "> Hello {{ user.first_name}}</a>
+           </li>
+           <li class="nav-item pad marg">
+           <li class="nav-link soc pad" ><a href="logout">Logout</a></li>
+           </li>
+             <li class="nav-item soc marg">
+        <a class="nav-link" href="accounts/aboutus">About Us</a>
+      </li>
+            <li class="nav-item topnav-right marg ">
+
+                    <a  href="#" target="_blank" class="fa fa-facebook nav-link soc marg"></a></li>
+                    <li class="nav-item  marg">
+                    <a href="#" target="_blank" class="fa fa-instagram nav-link soc"></a></li>
+                     <li class="nav-item  marg">
+                    <a href="#" target="_blank" class="fa fa-twitter nav-link soc"></a></li>
+                     <li class="nav-item  marg">
+                    <a href="#" class="fa fa-youtube nav-link soc"></a></li>
+                      <li class="nav-item  marg">
+                    <a href="#" class="fa fa-google nav-link soc"></a> 
+      </li>
+            {% else %}
+       <li class=" marg ">
+        <a class="nav-link soc" href="signup">Sign Up</a>
+      </li>
+       <li class="nav-item marg">
+        <a class="nav-link soc" href="signin">Login</a>
+      </li> 
+        <li class="nav-item soc marg">
+        <a class="nav-link soc" href="accounts/aboutus">About Us</a>
+      </li>
+        <li class="nav-item topnav-right marg">
+
+                    <a  href="#" target="_blank" class="fa fa-facebook nav-link soc"></a></li>
+                    <li class="nav-item marg">
+                    <a href="#" target="_blank" class="fa fa-instagram nav-link soc"></a></li>
+                     <li class="nav-item marg">
+                    <a href="#" target="_blank" class="fa fa-twitter nav-link soc"></a></li>
+                     <li class="nav-item marg">
+                    <a href="#" class="fa fa-youtube nav-link soc"></a></li>
+                      <li class="nav-item marg">
+                    <a href="#" class="fa fa-google nav-link soc"></a> 
+      </li>
+      {% endif %}   
+    </ul>
+    
+  </div>  
+</nav>
+
+
+{% block body %}
+
+
+{% endblock body %}
+
+
+</body>
+</html>
