@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)q!%c*)!mtism&myf6x48&gwytz6hy48xcg5f=5ur-e2zpr3u0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','mlpredictor.herokuapp.com/']
 
@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['127.0.0.1','mlpredictor.herokuapp.com/']
 
 INSTALLED_APPS = [
     'predictor.apps.PredictorConfig',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -136,3 +137,6 @@ STATIC_ROOT = os.path.join(BASE_DIR,'assets')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_URL='/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')

@@ -1,0 +1,128 @@
+{% extends 'index.html' %}
+{% block title %}{% endblock title %}
+{% block body %}
+
+
+
+
+<html>
+<title>breastCancer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<h3 style="text-align:center;">The best platform to detect BREAST CANCER using machine learning algorithms</h3>
+
+<br><br><br>
+
+<div class="w3-quarter w3-container w3-blue-grey container-fluid ">
+ <form action="breast" method="POST"  class="w3-container">
+    {% csrf_token %}
+  <p>
+  <label>id</label>
+  <input style="color: black;" name="id"class="w3-input" type="text"></p>
+  <p>
+  <label>radius_mean</label>
+  <input style="color: black;"  name="radius_mean"class="w3-input" type="text"></p>
+  <p>
+  <label>Texture mean</label>
+  <input style="color: black;" name="texture_mean"class="w3-input" type="text"></p>
+  <p>
+  <label>perimeter_mean</label>
+  <input style="color: black;" name="perimeter_mean"class="w3-input" type="text"></p>
+  <p>
+  <label>Area mean</label>
+  <input style="color: black;" name="area_mean"class="w3-input" type="text"></p>
+  <p>
+  <label>Smoothness mean</label>
+  <input style="color: black;" name="smoothness_mean"class="w3-input" type="text"></p>
+  <p>
+  <label>Compactness mean</label>
+  <input style="color: black;"  name="compactness_mean" class="w3-input" type="text"></p>
+  <p>
+  <label>concavity_mean</label>
+  <input style="color: black;" name="concavity_mean"class="w3-input" type="text"></p>
+  <p>
+  <label>conve point mean</label>
+  <input style="color: black;" name="concave_points_mean"class="w3-input" type="text"></p>
+  <p>
+  <label>Symmetry mean</label>
+  <input style="color: black;" name="symmetry_mean"class="w3-input" type="text"></p>
+  <p>
+  <label>fractal_dimension_mean</label>
+  <input style="color: black;" name="fractal_dimension_mean"class="w3-input" type="text"></p>
+  <p>
+  <label>radius se</label>
+  <input style="color: black;" name="radius_se" class="w3-input" type="text"></p>
+  <p>
+  <label>texture se</label>
+  <input style="color: black;" name="texture_se"class="w3-input" type="text"></p>
+  <p>
+  <label>perimeter se</label>
+  <input style="color: black;" name="perimeter_se"class="w3-input" type="text"></p>
+  <p>
+  <label>area se</label>
+  <input style="color: black;" name="area_se"class="w3-input" type="text"></p>
+  <p>
+  <label>smothness_se</label>
+  <input style="color: black;" name="smoothness_se"class="w3-input" type="text"></p>
+  <p>
+  <label>compactness se</label>
+  <input style="color: black;" name="compactness_se"class="w3-input" type="text"></p>
+  <p>
+  <label>concavity se</label>
+  <input style="color: black;" name="concavity_se"class="w3-input" type="text"></p>
+  <p>
+  <label>concave_points_se</label>
+  <input style="color: black;" name="concave_points_se"class="w3-input" type="text"></p>
+  <p>
+  <label>symmetry se</label>
+  <input style="color: black;" name="symmetry_se"class="w3-input" type="text"></p>
+  <p>
+  <label>Fractal dimension se</label>
+  <input style="color: black;" name="fractal_dimension_se"class="w3-input" type="text"></p>
+  <p>
+  <label>radius worst</label>
+  <input style="color: black;" name="radius_worst"class="w3-input" type="text"></p>
+  <p>
+  <label>texture_worst</label>
+  <input style="color: black;" name="texture_worst"class="w3-input" type="text"></p>
+  <p>
+  <label>perimeter worst</label>
+  <input style="color: black;" name="perimeter_worst" class="w3-input" type="text"></p>
+  <p>
+  <label>area worst</label>
+  <input style="color: black;" name="area_worst"class="w3-input" type="text"></p>
+  <p>
+  <label>smoothness worst</label>
+  <input style="color: black;" name="smoothness_worst"class="w3-input" type="text"></p>
+  <p>
+  <label>compactness worst</label>
+  <input style="color: black;" name="compactness_worst"class="w3-input" type="text"></p>
+  <p>
+  <label>concavity worst</label>
+  <input style="color: black;" name="concavity_worst"class="w3-input" type="text"></p>
+  <p>
+  <label>concave points worst</label>
+  <input style="color: black;" name="concave_points_worst"class="w3-input" type="text"></p>
+  <p>
+  <label>ssymmetry worst</label>
+  <input style="color: black;" name="symmetry_worst"class="w3-input" type="text"></p>
+  <p>
+  <label>fractal dimension worst</label>
+  <input style="color: black;" name="fractal_dimension_worst"class="w3-input" type="text"></p>
+  <input style="color: black;" type="submit" name="" value="submit">
+  {% if prediction == 0%}
+  <h2 style="color:black;">bye {{results}} cancer{{prediction}}</h2>
+  {% else%}
+  <h2 style="color:black;">hello {{results}} cancer {{prediction}}</h2>
+  {%endif%}
+</form>
+</div>
+</div>
+
+
+
+
+
+ 
+{% endblock body %}
