@@ -5,6 +5,7 @@ from django.contrib.auth.models import User,auth
 import datetime
 import json,urllib
 import pickle 
+ 
 # Create your views here.
 
 def predictor(request):
