@@ -1,4 +1,4 @@
-# [ML-Predictor](https://abhishek1437-portfolio.herokuapp.com/)
+# [ML-Predictor](https://mlpredictor.herokuapp.com/)
 ### This is my breast cancer detector website where we can detect breast cancer by filling all the features.
 ## Tools used
 - Django
