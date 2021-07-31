@@ -4,6 +4,6 @@
 - Django
 - Python
 - MySQL
-- HTML, CSS, javascript...
-#### You can chek here https://abhishek1437-portfolio.herokuapp.com/
+- HTML, CSS, javascript..... 
+
 
