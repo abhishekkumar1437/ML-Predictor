@@ -12,6 +12,8 @@ def predictor(request):
     return render(request,'home.html')
 
 
+
+
 def signin(request):
     if request.method=='POST':
         username = request.POST['username']
@@ -21,7 +23,7 @@ def signin(request):
 
         if user is not None:
             auth.login(request,user)
-            return redirect('/')
+            return redirect('predictor')
         else:
             messages.info(request,'Invalid username or password')
             return redirect('signin')
@@ -30,6 +32,7 @@ def signin(request):
     else:
         return render(request,'signin.html')
 
+import sklearn
 
 
 def signup(request):
@@ -46,7 +49,7 @@ def signup(request):
                 return redirect('signup')
            
             else:    
-                user = User.objects.create_user(username=username,name=first_name,email=email,password=password1)
+                user = User.objects.create_user(username=username,first_name=first_name,email=email,password=password1)
                 user.save()
                 messages.info(request,'User Created')
                 return redirect('signin')
@@ -60,7 +63,7 @@ def signup(request):
 
 def logout(request):
     auth.logout(request)
-    return redirect('/')
+    return redirect('predictor')
 
 
 
